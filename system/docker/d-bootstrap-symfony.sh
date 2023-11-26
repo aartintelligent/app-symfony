@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-if [ "$APP_USAGE" != "local" ]; then
+if [ "$APP_ENV" != "dev" ]; then
 
   if [ -n "$(ls -A /var/www/migrations/*.php 2>/dev/null)" ]; then
 

@@ -47,15 +47,25 @@ FROM aartintelligent/app-php:${PHP_VERSION}
 USER root
 
 ENV \
-APP_USAGE="local" \
 APP_ENV="prod" \
 APP_DEBUG="0" \
 APP_SECRET="0a8b194977b0562f420b014564bfc0fc" \
 DATABASE_URL="sqlite:///%kernel.project_dir%/var/data.db" \
 MESSENGER_TRANSPORT_DSN="doctrine://default?auto_setup=0" \
 MAILER_DSN="sendmail://default?command=/usr/sbin/sendmail%20-i%20-t" \
+NGINX_WORKER_PROCESSES="5" \
+NGINX_WORKER_CONNECTIONS="512" \
 PHP_MEMORY_LIMIT="4096M" \
-PHP_OPCACHE__PRELOAD="/var/www/config/preload.php"
+PHP_OPCACHE__ENABLE="1" \
+PHP_OPCACHE__ENABLE_CLI="1" \
+PHP_OPCACHE__PRELOAD="/var/www/config/preload.php" \
+PHP_OPCACHE__JIT="function" \
+PHP_OPCACHE__JIT_BUFFER_SIZE="512M" \
+FPM_LOG_BUFFER="no" \
+FPM_PM__TYPE="static" \
+FPM_PM__MAX_CHILDREN="5" \
+FPM_PM__PROCESS_IDLE_TIMEOUT="60s;" \
+FPM_PM__MAX_REQUESTS="512"
 
 COPY --chown=rootless:rootless src /var/www
 
