@@ -64,7 +64,6 @@ PHP_OPCACHE__JIT_BUFFER_SIZE="512M" \
 FPM_LOG_BUFFER="no" \
 FPM_PM__TYPE="static" \
 FPM_PM__MAX_CHILDREN="5" \
-FPM_PM__PROCESS_IDLE_TIMEOUT="60s;" \
 FPM_PM__MAX_REQUESTS="512"
 
 COPY --chown=rootless:rootless src /var/www
