@@ -3,11 +3,9 @@
 /.github
 /.env
 /.gitignore
-/docker-compose.yml
 /Dockerfile
 /icon.svg
 /README.md
-/helm
 /src/phpunit.xml.dist
 /src/.env.*
 /src/bin/phpunit

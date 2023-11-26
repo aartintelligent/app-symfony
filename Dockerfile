@@ -1,4 +1,4 @@
-ARG PHP_VERSION='8.2'
+ARG PHP_VERSION='8.3'
 
 FROM aartintelligent/ops-composer:${PHP_VERSION} AS symfony-ops-composer
 
@@ -60,6 +60,8 @@ PHP_OPCACHE__PRELOAD="/var/www/config/preload.php"
 COPY --chown=rootless:rootless src /var/www
 
 COPY --chown=rootless:rootless --from=symfony-ops-composer /src/vendor /var/www/vendor
+
+COPY --chown=rootless:rootless --from=symfony-ops-yarn /src/public/build /var/www/public/build
 
 COPY --chown=rootless:rootless system /
 

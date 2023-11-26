@@ -11,7 +11,7 @@ docker run -it --rm \
 -u $(id -u):$(id -g) \
 -v $(pwd)/src:/src \
 -v $(pwd)/.composer:/var/cache/composer \
-aartintelligent/ops-composer:8.2 \
+aartintelligent/ops-composer:8.3 \
 install
 ```
 
@@ -20,7 +20,7 @@ docker run -it --rm \
 -u $(id -u):$(id -g) \
 -v $(pwd)/src:/src \
 -v $(pwd)/.composer:/var/cache/composer \
-aartintelligent/ops-composer:8.2 \
+aartintelligent/ops-composer:8.3 \
 update
 ```
 
