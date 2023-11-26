@@ -51,7 +51,7 @@ APP_USAGE="local" \
 APP_ENV="prod" \
 APP_DEBUG="0" \
 APP_SECRET="0a8b194977b0562f420b014564bfc0fc" \
-DATABASE_URL="postgresql://app:!ChangeMe!@127.0.0.1:5432/app?serverVersion=15&charset=utf8" \
+DATABASE_URL="sqlite:///%kernel.project_dir%/var/data.db" \
 MESSENGER_TRANSPORT_DSN="doctrine://default?auto_setup=0" \
 MAILER_DSN="sendmail://default?command=/usr/sbin/sendmail%20-i%20-t" \
 PHP_MEMORY_LIMIT="4096M" \
