@@ -40,7 +40,9 @@ COPY src /src
 
 RUN set -eux; \
 yarn install; \
-yarn run encore production
+yarn run \
+encore \
+production
 
 FROM aartintelligent/app-php:${PHP_VERSION}
 
