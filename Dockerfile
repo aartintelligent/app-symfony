@@ -71,13 +71,13 @@ FPM_PM__TYPE="static" \
 FPM_PM__MAX_CHILDREN="5" \
 FPM_PM__MAX_REQUESTS="512"
 
+COPY --chown=rootless:rootless system /
+
 COPY --chown=rootless:rootless src /var/www
 
 COPY --chown=rootless:rootless --from=symfony-ops-composer /src/vendor /var/www/vendor
 
 COPY --chown=rootless:rootless --from=symfony-ops-yarn /src/public/build /var/www/public/build
-
-COPY --chown=rootless:rootless system /
 
 RUN set -eux; \
 echo "/docker/d-bootstrap-symfony.sh" >> /docker/d-bootstrap.list; \
