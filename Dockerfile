@@ -59,6 +59,8 @@ MESSENGER_TRANSPORT_DSN="doctrine://default?auto_setup=0" \
 MAILER_DSN="sendmail://default?command=/usr/sbin/sendmail%20-i%20-t" \
 NGINX_WORKER_PROCESSES="5" \
 NGINX_WORKER_CONNECTIONS="512" \
+NGINX_ACCESS_LOG_FILE="/dev/null" \
+NGINX_ERROR_LOG_FILE="/proc/1/fd/2" \
 PHP_MEMORY_LIMIT="4096M" \
 PHP_OPCACHE__ENABLE="1" \
 PHP_OPCACHE__ENABLE_CLI="1" \
