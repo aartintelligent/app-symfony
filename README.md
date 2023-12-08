@@ -73,7 +73,7 @@ docker build . \
 
 ```shell
 docker build . \
---tag aartintelligent/app-symfony:6.3 \
+--tag aartintelligent/app-symfony:6.4 \
 --build-arg "UID=$(id -u)" \
 --build-arg "GID=$(id -g)" \
 --build-arg "GIT_COMMIT=$(git rev-parse HEAD)"
@@ -133,7 +133,7 @@ docker login -u aartintelligent
 ```
 
 ```shell
-docker push aartintelligent/app-symfony:6.3
+docker push aartintelligent/app-symfony:6.4
 ```
 
 ```shell
