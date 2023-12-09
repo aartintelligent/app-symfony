@@ -50,13 +50,6 @@ aartintelligent/app-symfony:latest
 ```
 
 ```shell
-docker run -d \
---net host \
---name app-symfony \
-aartintelligent/app-symfony:6.3
-```
-
-```shell
 docker container logs app-symfony
 ```
 
@@ -89,10 +82,6 @@ docker stop app-symfony
 
 ```shell
 docker rm app-symfony
-```
-
-```shell
-docker push aartintelligent/app-symfony:6.4
 ```
 
 ```shell
