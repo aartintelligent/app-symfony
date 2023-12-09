@@ -33,8 +33,6 @@ aartintelligent/ops-yarn:latest \
 watch
 ```
 
----
-
 ```shell
 docker build . \
 --tag aartintelligent/app-symfony:latest \
