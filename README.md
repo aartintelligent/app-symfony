@@ -25,15 +25,6 @@ update
 ```
 
 ```shell
-docker run -it --rm \
--u $(id -u):$(id -g) \
--v $(pwd)/src:/src \
--v $(pwd)/.yarn:/var/cache/yarn \
-aartintelligent/ops-yarn:latest \
-watch
-```
-
-```shell
 docker build . \
 --tag aartintelligent/app-symfony:latest \
 --build-arg "UID=$(id -u)" \
@@ -49,6 +40,13 @@ docker build . \
 --build-arg "GID=$(id -g)" \
 --build-arg "GIT_COMMIT=$(git rev-parse HEAD)" \
 --build-arg "PHP_VERSION=8.3"
+```
+
+```shell
+docker run -d \
+--net host \
+--name app-symfony \
+aartintelligent/app-symfony:latest
 ```
 
 ```shell
