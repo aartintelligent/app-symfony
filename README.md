@@ -42,7 +42,8 @@ docker build . \
 --tag aartintelligent/app-symfony:latest \
 --build-arg "UID=$(id -u)" \
 --build-arg "GID=$(id -g)" \
---build-arg "GIT_COMMIT=$(git rev-parse HEAD)"
+--build-arg "GIT_COMMIT=$(git rev-parse HEAD)" \
+--build-arg "PHP_VERSION=8.3"
 ```
 
 ```shell
@@ -50,7 +51,8 @@ docker build . \
 --tag aartintelligent/app-symfony:6.4 \
 --build-arg "UID=$(id -u)" \
 --build-arg "GID=$(id -g)" \
---build-arg "GIT_COMMIT=$(git rev-parse HEAD)"
+--build-arg "GIT_COMMIT=$(git rev-parse HEAD)" \
+--build-arg "PHP_VERSION=8.3"
 ```
 
 ```shell
