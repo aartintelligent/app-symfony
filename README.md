@@ -92,10 +92,6 @@ docker rm app-symfony
 ```
 
 ```shell
-docker login -u aartintelligent
-```
-
-```shell
 docker push aartintelligent/app-symfony:6.4
 ```
 
