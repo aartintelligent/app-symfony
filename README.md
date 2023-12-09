@@ -55,13 +55,6 @@ docker build . \
 docker run -d \
 --net host \
 --name app-symfony \
-aartintelligent/app-symfony:latest
-```
-
-```shell
-docker run -d \
---net host \
---name app-symfony \
 aartintelligent/app-symfony:6.3
 ```
 
