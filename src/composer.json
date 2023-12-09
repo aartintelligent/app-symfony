@@ -4,12 +4,12 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
-        "php": ">=8.3",
+        "php": ">=8.1",
         "ext-ctype": "*",
         "ext-iconv": "*",
-        "doctrine/doctrine-bundle": "^2.10",
-        "doctrine/doctrine-migrations-bundle": "^3.2",
-        "doctrine/orm": "^2.16",
+        "doctrine/doctrine-bundle": "^2.11",
+        "doctrine/doctrine-migrations-bundle": "^3.3",
+        "doctrine/orm": "^2.17",
         "phpdocumentor/reflection-docblock": "^5.3",
         "phpstan/phpdoc-parser": "^1.24",
         "symfony/asset": "6.4.*",
@@ -37,7 +37,6 @@
         "symfony/twig-bundle": "6.4.*",
         "symfony/validator": "6.4.*",
         "symfony/web-link": "6.4.*",
-        "symfony/webpack-encore-bundle": "^2.1",
         "symfony/yaml": "6.4.*",
         "twig/extra-bundle": "^2.12|^3.0",
         "twig/twig": "^2.12|^3.0"
@@ -96,7 +95,7 @@
         "symfony/css-selector": "6.4.*",
         "symfony/debug-bundle": "6.4.*",
         "symfony/maker-bundle": "^1.0",
-        "symfony/phpunit-bridge": "^6.3",
+        "symfony/phpunit-bridge": "^7.0",
         "symfony/stopwatch": "6.4.*",
         "symfony/web-profiler-bundle": "6.4.*"
     }

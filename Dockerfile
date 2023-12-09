@@ -27,23 +27,6 @@ composer install \
 composer dump-autoload \
 --optimize
 
-FROM aartintelligent/ops-yarn:latest AS symfony-ops-yarn
-
-ENV \
-YARN_CACHE_FOLDER="/var/cache/yarn"
-
-VOLUME ["/var/cache/yarn"]
-
-COPY .yarn /var/cache/yarn
-
-COPY src /src
-
-RUN set -eux; \
-yarn install; \
-yarn run \
-encore \
-production
-
 FROM aartintelligent/app-php:${PHP_VERSION}
 
 USER root
@@ -76,8 +59,6 @@ COPY --chown=rootless:rootless system /
 COPY --chown=rootless:rootless src /var/www
 
 COPY --chown=rootless:rootless --from=symfony-ops-composer /src/vendor /var/www/vendor
-
-COPY --chown=rootless:rootless --from=symfony-ops-yarn /src/public/build /var/www/public/build
 
 RUN set -eux; \
 echo "/docker/d-bootstrap-symfony.sh" >> /docker/d-bootstrap.list; \
