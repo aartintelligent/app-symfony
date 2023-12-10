@@ -35,9 +35,6 @@ ENV \
 APP_ENV="prod" \
 APP_DEBUG="0" \
 APP_SECRET="0a8b194977b0562f420b014564bfc0fc" \
-DATABASE_URL="sqlite:///%kernel.project_dir%/var/data.db" \
-MESSENGER_TRANSPORT_DSN="doctrine://default?auto_setup=0" \
-MAILER_DSN="sendmail://default?command=/usr/sbin/sendmail%20-i%20-t" \
 NGINX_WORKER_PROCESSES="5" \
 NGINX_WORKER_CONNECTIONS="512" \
 NGINX_ACCESS_LOG_FILE="/dev/null" \
