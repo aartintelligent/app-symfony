@@ -1,6 +1,6 @@
 # App Symfony
 
-### Docker Usage
+### Usage
 
 ```shell
 mkdir -p $(pwd)/.composer
