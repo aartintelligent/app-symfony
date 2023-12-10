@@ -32,8 +32,6 @@ FROM aartintelligent/app-php:${PHP_VERSION}
 USER root
 
 ENV \
-API_RUNTIME="supervisord" \
-API_RUNTIME_CLI="php" \
 APP_ENV="prod" \
 APP_DEBUG="0" \
 APP_SECRET="0a8b194977b0562f420b014564bfc0fc" \
